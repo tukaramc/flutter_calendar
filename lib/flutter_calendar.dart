@@ -6,6 +6,8 @@ import 'package:intl/intl.dart';
 import 'package:flutter_calendar/calendar_tile.dart';
 import 'package:date_utils/date_utils.dart';
 import 'package:cuecladapp/utils/themeColor.dart';
+import 'package:cuecladapp/modified_files/date_picker.dart';
+
 ////////////  C:\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_calendar-0.0.4\lib
 
 typedef DayBuilder(BuildContext context, DateTime day);
@@ -404,7 +406,7 @@ class _CalendarState extends State<Calendar> {
   }
 
   Future<Null> selectDateFromPicker() async {
-    DateTime selected = await showDatePicker(
+    DateTime selected = await showDatePicker1(
       context: context,
       initialDate: _selectedDate ?? new DateTime.now(),
       firstDate: new DateTime(1960),
